@@ -1,3 +1,5 @@
+![WideImg](https://fictizia.com/img/github/Fictizia-plan-estudios-github.jpg)
+
 # [Máster en Programación con Python](https://fictizia.com/formacion/master-programacion-python)
 ### Programación, Asincronía, POO, Programación Funcional, Desarrollo de Software, MV*, Python for Science
 
