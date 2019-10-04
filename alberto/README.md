@@ -5,4 +5,4 @@ Estoy interesando en:
 
  - Python 
  - Scrapy
- - Bigdata
+
