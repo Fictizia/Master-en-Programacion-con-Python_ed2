@@ -10,3 +10,4 @@
  6. Una vez instalado e, en la primera pantalla ya salía la posibilidad
     de asociar el proyecto el editor VSC
  7. Así lo hice y ya si me aparecía
+ 
