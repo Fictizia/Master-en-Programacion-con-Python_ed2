@@ -34,4 +34,8 @@ d = c
 c = 'Mundo'
 print(d)
 
+x = 'hola'
+print(x is 'hola')
 
+x = 1
+print(x is 1)
