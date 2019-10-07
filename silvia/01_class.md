@@ -2,13 +2,13 @@
 
 ## COMANDOS UNIX IMPORTANTES
 
-- mkdir workspace: crea un nuevo directorio, en este caso llamado workspace.
-- ls: lista el contenido de un directorio.
-- cd workspace: cambia de directorio. En este caso nos lleva al directorio workspace.
-- pwd: indica el directorio actual.
-- rm -r directorio:
+- `<mkdir workspace>`: crea un nuevo directorio, en este caso llamado workspace.
+- `<ls>`: lista el contenido de un directorio.
+- `<cd workspace>`: cambia de directorio. En este caso nos lleva al directorio workspace.
+- `<pwd>`: indica el directorio actual.
+- `<rm -rf directorio>`:
   - rm: borra directorio.
-  - -r: borra recursivamente todos los subdirectorios y archivos que cuelgan del directorio a borrar.
+  - -rf: borra recursivamente todos los subdirectorios y archivos que cuelgan del directorio a borrar.
 
 ## GIT
 
@@ -18,12 +18,12 @@ GitHub es un alojamiento de repositorios de Git.
 
 ### Flujo de trabajo
 
-Estando logados en GitHub, hacemos un Fork del repositorio original. En este caso, hacemos un Fork del repositorio Master-en-Programacion-con-Python_ed2. De este modo, se crea una copia de ese repositorio en nuestra cuenta de GitHub.
+Estando logados en GitHub, hacemos un Fork del repositorio original. En este caso, hacemos un Fork del repositorio https://github.com/Fictizia/Master-en-Programacion-con-Python_ed2.git. De este modo, se crea una copia de ese repositorio en nuestra cuenta de GitHub.
 
 Cuando ya tenemos este repositorio en GitHub, lo clonamos desde nuestra cuenta a nuestro equipo con el comando
-`<git clone https://github.com/Fictizia/Master-en-Programacion-con-Python_ed2.git>`
+`<git clone https://github.com/sarnaizgarcia/Master-en-Programacion-con-Python_ed2.git>`
 
-En Visual Studio Code, una vez que hemos hecho los cambios, pinchamos en el icono del SCV que nos mostrará el listado de cambios realizados para añadir los que se necesite al Stagging Area con el botón en el que aparece un +. Una vez seleccionados los cambios que se quieren añadir, para hacer el commit se pincha en el icono de verificación (√) y se indican en el mensaje las modificaciones que se han hecho.
+En Visual Studio Code, una vez que hemos hecho los cambios, pinchamos en el icono del condensador que nos mostrará el listado de cambios realizados para añadir los que se necesite al Stagging Area con el botón en el que aparece un +. Una vez seleccionados los cambios que se quieren añadir, para hacer el commit se pincha en el icono de verificación (√) y se indican en el mensaje las modificaciones que se han hecho.
 
 Para subir los cambios hechos en local a nuestro repositorio en GitHub se utiliza el icono de sincronización que está en la parte inferior de la pantalla.
 
@@ -31,7 +31,7 @@ De este modo, quedan registrados los cambios en nuestros repositorio local y en 
 
 Para que los cambios que hemos hecho en ese repositorio se suban al repositorio de origen (del que se ha hecho el Fork), hemos de hacer una Pull Request, que es un commit que debe aprobar el “propietario” del repositorio original.
 
-Puede pasar que desde que hemos hecho el Fork del repositorio original, se hayan hecho cambios en este y nuestro Fork se encuentre desactualizado. Para actualizarlo, pinchamos en el botón de comparar, después en la opción “Try switching the base” y en caso de que estemos desactualizados, se solicitará una nueva Pull Request a nuestro Fork.
+Puede pasar que desde que hemos hecho el Fork del repositorio original, se hayan hecho cambios en este y nuestro Fork se encuentre desactualizado. Para actualizarlo, pinchamos en Pull Request, New Pull Request, botón de comparar y en la opción “Try switching the base”. En caso de que estemos desactualizados, se solicitará una nueva Pull Request del repositorio original de Fictizia a nuestro Fork.
 
 Para cambiar en Git el usuario que queremos que aparezca usamos el comando: `<git config --local user.name ‘nombre’>`
 
@@ -47,13 +47,11 @@ Tipado dinámico fuerte. Sólo se puede operar con operandos que sean del mismo 
 
 - **Básicos**:
 
-  - strings o cadenas de texto:
-    - Son listas (arrays).
-    - Se escriben entre comillas dobles (") o simples (').
+  - strings o cadenas de texto. Se escriben entre comillas dobles (") o simples (').
   - números:
     - enteros.
     - decimales o floats, positivos o negativos.
-  - boleanos:
+  - booleanos:
     - True.
     - False.
 
@@ -80,10 +78,12 @@ Ejemplos:
 
 Ejemplos:
 
-- a = 12
-- 'hola' + 'mundo' = 'hola mundo'
-- cadena_uno = 'hola'
-- cadena_dos = 'mundo'
+* a = 12
+* 'hola' + 'mundo' = 'hola mundo'
+* cadena_uno = 'hola'
+* cadena_dos = 'mundo'
+* cadena_uno + cadena_dos = 'hola mundo'
+
 
 ## RECURSOS
 
