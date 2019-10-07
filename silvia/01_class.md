@@ -6,9 +6,9 @@
 - ls: lista el contenido de un directorio.
 - cd workspace: cambia de directorio. En este caso nos lleva al directorio workspace.
 - pwd: indica el directorio actual.
-- rm -r directorio:
+- rm -rf directorio:
   - rm: borra directorio.
-  - -r: borra recursivamente todos los subdirectorios y archivos que cuelgan del directorio a borrar.
+  - -rf: borra recursivamente todos los subdirectorios y archivos que cuelgan del directorio a borrar.
 
 ## GIT
 
@@ -48,8 +48,8 @@ Tipado dinámico fuerte. Sólo se puede operar con operandos que sean del mismo 
 - **Básicos**:
 
   - strings o cadenas de texto:
-    - Son listas (arrays).
-    - Se escriben entre comillas dobles (") o simples (').
+    - son listas (arrays).
+    - se escriben entre comillas dobles (") o simples (').
   - números:
     - enteros.
     - decimales o floats, positivos o negativos.
