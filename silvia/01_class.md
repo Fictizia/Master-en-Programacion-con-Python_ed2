@@ -79,7 +79,6 @@ Ejemplos:
 Ejemplos:
 
 * a = 12
-* 'hola' + 'mundo' = 'hola mundo'
 * cadena_uno = 'hola'
 * cadena_dos = 'mundo'
 * cadena_uno + cadena_dos = 'hola mundo'
