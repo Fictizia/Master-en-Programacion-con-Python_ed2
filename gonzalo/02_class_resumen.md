@@ -1,4 +1,3 @@
-
 ## Resumen clase 2ª Python ##
 
 -**Mi chuleta para trabajar en terminal Git Bash de Windows **-
@@ -68,12 +67,33 @@ $ cd Master-en-Programacion-con-Python_ed2
 $ ls
 01_class.md  alberto/  gonzalo/  jose/  Master-en-Programacion-con-Python_ed2/  README.md  silvia/
 
-Se van 'trayendo' los nuevos ficheros con git pull
-Y se van 'subiendo' con el editor Visual Studio Code.
+ - ***Se van 'trayendo' los nuevos ficheros con git pull***
+
+$ cd GONZAPYTHON
+
+$ ls
+Master-en-Programacion-con-Python_ed2/
+
+$ cd Master-en-Programacion-con-Python_ed2
+
+$ git pull
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 4 (delta 2), reused 4 (delta 2), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From https://github.com/gonzapython/Master-en-Programacion-con-Python_ed2
+   af61b6d..4321f8e  master     -> origin/master
+Updating af61b6d..4321f8e
+Fast-forward
+ ***gonzalo/02_class_resumen.md*** | 81 ++++++++++++++++++++++++++++++++++++++++++---
+ 1 file changed, 77 insertions(+), 4 deletions(-)
+
+ - ***Y se van 'subiendo' con el editor Visual Studio Code.***
 
 ==========================================================
 
-Luego, la clase muy resumida fue:
+Luego, la clase (muy resumida) fue:
 
 Empezamos trabajando con programas básicos en Python
 
