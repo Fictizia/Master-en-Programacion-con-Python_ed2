@@ -67,3 +67,5 @@
 
 if number <= 1:
     print('El número tiene que ser mayor que 1 para poder ser primo')
+    if number == 2:
+        
