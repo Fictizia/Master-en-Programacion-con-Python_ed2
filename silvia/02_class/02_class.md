@@ -26,7 +26,7 @@ print(f'hola {name} tienes {age} años, y sé que {name} realmente no es tu nomb
 
 print('hola {nombre} tienes {edad} años, y sé que {nombre} realmente no es tu nombre'.format(nombre = name, edad = age))
 
-print('hola {} tienes {} años, y sé que {} realmente no es tu nombre'.format(name, age, name))
+print('hola {} tienes {} años, y sé que {} realmente no es tu nombre'.format(name, age, name)) NO ES BUENA PRÁCTICA
 
 print('hola {0} tienes {1} años, y sé que {0} realmente no es tu nombre'.format(name, age))
 ```
@@ -186,7 +186,7 @@ pineapple
 ['banana', 'pear', 'apple', 'pineapple']
 ```
 
-Al contrario que con los números o las cadenas de texto, las listas son objetos mutables, por lo que se pueden modificar sin cambiar el lugar que ocupan en memoria:
+Las listas se pueden modificar sin cambiar el lugar que ocupan en memoria:
 
 ```
 summer_fruits = ['melon', 'watermelon']
@@ -323,7 +323,7 @@ TypeError: 'tuple' object does not support item assignment
 
 ### **Sets**
 
-Son colecciones de elementos sin ordenar, sin indexar y que no admiten duplicados. Se escriben entre llaves {}:
+Son colecciones de elementos sin ordenar, sin indexar y que no admiten duplicados. Son similares a los conjuntos. Se escriben entre llaves {}:
 
 ```
 my_set = {1, 1, 2, 2, 4}
@@ -504,7 +504,7 @@ Resultado:
 False
 ```
 
-Se pueden añadir elementos al diccionario de diferentes maneras:
+Se pueden añadir o reescribir elementos al diccionario de diferentes maneras:
 
 - Con el método update(), preferiblemente:
 
