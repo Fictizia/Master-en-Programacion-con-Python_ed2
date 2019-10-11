@@ -15,7 +15,7 @@ else:
     numero_entrada = int(numero_entrada)
 
     if numero_entrada > 1:
-        numero_entrada == numero_entrada
+        #numero_entrada == numero_entrada
         print(numero_entrada)
 
         #el único NUMERO PRIMO y PAR es el 2
