@@ -1,6 +1,6 @@
 # STRING METHODS
 
-- **.capitalize()**: devuelve una copia de la cadena con el primer caracter en mayúscula y el resto en minúscula.
+- **str.capitalize()**: devuelve una copia de la cadena con el primer caracter en mayúscula y el resto en minúscula.
 
 ```
 text = 'temiendo Dantés ser sorprendido en las grutas durante la noche, cogió su fusil y salió al aire libre.'
@@ -11,7 +11,7 @@ print(texto_cap)
 Temiendo dantés ser sorprendido en las grutas durante la noche, cogió su fusil y salió al aire libre.
 ```
 
-- **.casefold()**: devuelve todo el texo en minúsculas.
+- **str.casefold()**: devuelve todo el texo en minúsculas.
 
 ```
 text = 'temiendo Dantés ser sorprendido en las grutas durante la noche, cogió su fusil y salió al aire libre.'
@@ -22,7 +22,7 @@ print(casefolded)
 temiendo dantés ser sorprendido en las grutas durante la noche, cogió su fusil y salió al aire libre.
 ```
 
-- **.center(width[, fillchar])**: centra un texto, que tendrá la longitud que le indiquemos:
+- **str.center(width[, fillchar])**: centra un texto, que tendrá la longitud que le indiquemos:
 
   - width: longitud que queremos que tenga el texto.
   - fillchar (opcional): carácter con el que se rellenan los espacios en blanco.
@@ -36,7 +36,7 @@ print(centered)
 ------------cogió su fusil y salió al aire libre------------
 ```
 
-- **.count(sub[, start[, end]])**: devuelve el número de veces que un valor concreto aparece en un texto:
+- **str.count(sub[, start[, end]])**: devuelve el número de veces que un valor concreto aparece en un texto:
 
   - sub: la cadena que queremos localizar.
   - start (opcional): entero que indica en qué posición queremos empezar a buscar. Por defecto es 0.
@@ -53,10 +53,10 @@ print(counted)
 
 - **str.encode(encoding="utf-8", errors="strict")**
 
-* **.endswith(suffix[, start[, end]])**: devuelve True si el string finaliza con el valor especificado o False si no es así:
+- **str.endswith(suffix[, start[, end]])**: devuelve True si el string finaliza con el valor especificado o False si no es así:
   - suffix: valor que queremos comprobar si finaliza la cadena.
-  * start (opcional): entero que indica en qué posición queremos empezar a buscar.
-  * end (opciona): entero que indica en qué posición queremos finalizar la búsqueda.
+  - start (opcional): entero que indica en qué posición queremos empezar a buscar.
+  - end (opciona): entero que indica en qué posición queremos finalizar la búsqueda.
 
 ```
 text = 'temiendo Dantés ser sorprendido en las grutas durante la noche, cogió su fusil y salió al aire libre.'
@@ -67,6 +67,35 @@ print(ended_with)
 False
 
 ```
+
+- **str.expandtabs(tabsize=8)**: devuelve una copia de la cadena en la que las tabulaciones se sustituyen por uno o más espacios, dependiendo del tamaño que se especifique.
+
+```
+text = "H\te\tl\tl\to"
+
+x =  text.expandtabs(3)
+
+print(x)
+
+Hello
+```
+
+- **str.find(sub[, start[, end]])**: busca el valor indicado y devuelve en qué posición se ha encontrado:
+
+  - sub: el valor que se busca.
+
+  * start (opcional): dónde se empieza a buscar. Por defecto de 0.
+  * end (opcional): dónde se termina de buscar. Por defecto es el final del string.
+
+```
+text = 'temiendo Dantés ser sorprendido en las grutas durante la noche, cogió su fusil y salió al aire libre.'
+
+encontrado = text.find('en')
+
+print(encontrado)
+```
+
+- **str.format(\*args, **kwargs)\*\*:
 
 # RECURSOS
 

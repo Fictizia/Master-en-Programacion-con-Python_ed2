@@ -3,31 +3,56 @@
 
 numero_introducido = input('Introduce un número: ')
 
-def decenas(numero):
-    numero = numero - 2
+
+def centenas(numero):
+    numero = numero_introducido[-3]
     numero = int(numero)
     if numero <= 3:
-        print('I' * numero)
-    if numero == 4:
-        print('IV')
-    if numero >= 5 and numero < 9:
+        result = 'C' * numero
+    elif numero == 4:
+        result = 'CD'
+    elif numero >= 5 and numero < 9:
         resta = numero - 5
-        i_detras_v = 'I' * resta
-        print('V' + i_detras_v)
+        d_detras_c = 'D' * resta
+        result = 'C' + d_detras_c
     else:
-        print('IX')
+        result ='CM'
+    
+    return result
+
+
+def decenas(numero):
+    numero = numero_introducido[-2]
+    numero = int(numero)
+    if numero <= 3:
+        result = 'X' * numero
+    elif numero == 4:
+        result = 'XL'
+    elif numero >= 5 and numero < 9:
+        resta = numero - 5
+        x_detras_l = 'X' * resta
+        result = 'L' + x_detras_l
+    else:
+        result = 'XC'
+    
+    return result
+
 
 def unidades(numero):
-    numero = [-1]
-    int(numero)
+    numero = numero_introducido[-1]
+    numero = int(numero)
     if numero <= 3:
-        print('I' * numero)
-    if numero == 4:
-        print('IV')
-    if numero >= 5 and numero < 9:
+        result = 'I' * numero
+    elif numero == 4:
+        result = 'IV'
+    elif numero >= 5 and numero < 9:
         resta = numero - 5
         i_detras_v = 'I' * resta
-        print('V' + i_detras_v)
+        result = 'V' + i_detras_v
     else:
-        print('IX')
+        result ='IX'
+    
+    return result
 
+
+print(centenas(numero_introducido) + decenas(numero_introducido) + unidades(numero_introducido))
