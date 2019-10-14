@@ -7,10 +7,10 @@ data = dict()
 with open('clase.json', 'r') as json_file:
     data = json.load(json_file) 
 
-while open('clase.json', 'w'):
+while open('clase.json', 'w') as writable_jason:
     my_data.update({'piton':'mola'})
     new_data = json.dumps(my_data)
-    json_file.write(my_data)
+    writable_jason.write(my_data)
 
 print(my_data)
 
