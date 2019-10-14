@@ -65,7 +65,27 @@
 # number = input('Dime un número entero $>:')
 # number = int(number)
 
-if number <= 1:
-    print('El número tiene que ser mayor que 1 para poder ser primo')
-    if number == 2:
-        
+#if number <= 1:
+    #if number == 2:
+    #print('El número tiene que ser mayor que 1 para poder ser primo')
+
+comprobar = True
+while comprobar:
+    n = int(input('Introduce un número'))
+    if n > 0:
+        comprobar = False
+        i = 2 
+        while i < n:
+            c = 2
+            primo = True
+            while primo and c < i:
+                if i % c == 0:
+                    primo = False
+                else:
+                    c += 1
+                i += 1
+        if True:
+            print(i, "Es primo")
+    
+    else:
+        print ("No es correcto, vuelve a intentarlo.")
