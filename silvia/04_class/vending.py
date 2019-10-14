@@ -42,11 +42,14 @@ items = {'coca-cola': {
 },
     'ensalada': {
     'price': 3.50,
-    'quantity': 10,
+    'quantity': 20,
 },
 }
 
-total_items = 120
+total_items = 0
+for item in items:
+    total_items += items[item]['quantity']
+print(total_items)
 
 credit = int(input('¿Cuánto crédito tienes?: '))
 
