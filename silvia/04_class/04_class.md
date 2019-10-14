@@ -21,10 +21,10 @@ Una función es un bloque de código que funciona cuando es llamada y a la que s
 Ejemplo:
 
 ```
-def greetings(name): # DECLARACIÓN DE LA FUNCIÓN
+def greetings(name):
     print(f'Hola, {name}')
 
-# greetings('Silvia') # LLAMADA A LA FUNCIÓN
+# greetings('Silvia')
 ```
 
 Resultado:
@@ -97,8 +97,8 @@ Otra forma de hacerlo:
 
 ```
 for clave in people_in_class:
-    print(clave) # IMPRIME CLAVE
-    print(people_in_class[clave]) # IMPRIME VALOR
+    print(clave)
+    print(people_in_class[clave])
 ```
 
 Resultado:
