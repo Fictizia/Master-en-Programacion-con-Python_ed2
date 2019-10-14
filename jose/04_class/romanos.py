@@ -8,6 +8,7 @@ def decenas(numero):
     numero = int(numero)
 
     if numero <= 3:
+
         print('I' * numero)
 
     if numero == 4:
