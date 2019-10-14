@@ -3,7 +3,7 @@ numero = int(numero)
 
 contador = 2
 
-while numero >= 0 and numero % contador != 0:
+while numero > 1 and numero % contador != 0:
     contador += 1
 
 if contador == numero:
