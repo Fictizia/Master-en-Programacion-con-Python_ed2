@@ -11,4 +11,4 @@ def greetings(person, print_me):
     else:
         print('Hakina Matata')
 
-greetings({'name': 'Jose', 'age': 36}, 'N') # Recibe como parámetro un diccionario
+greetings({'name': 'Jose', 'age': 36}, 'N') # Recibe como parámetro un diccionario. Cualquier string es True, por lo que print_me es True. Vale cualquier cosa menos None

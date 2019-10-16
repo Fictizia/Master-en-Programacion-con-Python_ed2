@@ -2,7 +2,7 @@
 
 ## COMPLEJIDAD CICLOMÁTICA
 
-Se produce cuando hay muchas estructuras anidadas.
+Se produce cuando hay muchas estructuras anidadas. Esto produce un código menos legible y más lento.
 
 ## ENTORNO VIRTUAL
 
@@ -14,9 +14,21 @@ Para crearlo:
 python3 -m venv ./directorio
 ```
 
+Para ejecutarlo, hay que ir a la raiz del proyecto y escribir:
+
+```
+source directorio/bin/activate
+```
+
+Para desactivarlo:
+
+```
+deactivate
+```
+
 ## FUNCIONES
 
-Una función es un bloque de código que funciona cuando es llamada y a la que se le puede pasar un parámetro.
+Una función es un bloque de código que funciona cuando es llamada y a la que se le puede pasar los parámetro que se quiera.
 
 Ejemplo:
 
@@ -72,12 +84,12 @@ Resultado:
 dict_items([('profe', 'Jose'), ('primer_alumno', 'Alberto'), ('segundo_alumno', 'Silvia'), ('tercer_alumno', 'Gonzalo')])
 ```
 
-Para acceder a los elementos e iterar sobre ellos:
+Para acceder a los elementos e iterar sobre ellos, se usa preferiblemente esta forma:
 
 ```
 for clave, valor in people_in_class.items():
-print(clave)
-print(valor)
+    print(clave)
+    print(valor)
 ```
 
 Resultado:
