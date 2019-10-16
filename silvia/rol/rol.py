@@ -5,12 +5,12 @@ from random import randint
 DATA_PATH = './silvia/rol/players.json'
 
 
-def tirar_dado():
-    tirada = randint(0, 100)
-    return tirada
+def throw_dice():
+    score_dice = randint(0, 100)
+    return score_dice
 
 
-def usuarios_vivos(PATH):
+def alive_players(PATH):
 
     players_dict = dict()
 
@@ -20,15 +20,15 @@ def usuarios_vivos(PATH):
 
     def sort_list(e):
         # e, son los elementos de ordered_players
-        return players_dict[e]['orden']
+        return players_dict[e]['turn']
 
     ordered_players = list()
 
     for key in players_dict:
-        if players_dict[key]['vida'] > 0:
+        if players_dict[key]['life'] > 0:
             ordered_players.append(key)
 
-    # Al método sort, hay que pasarle una función propia(sort_list) para decir con qué criterio ordena
+    # Al método sort, hay que pasarle una función propia(sort_list) para decir con qué criterio turna
     ordered_players.sort(key=sort_list)
 
     return ordered_players
@@ -42,9 +42,9 @@ def update_life(PATH, player, action, amount):
         players_dict = json.load(json_file)
 
     if action == 'add':
-        players_dict[player]['vida'] += amount
+        players_dict[player]['life'] += amount
     else:
-        players_dict[player]['vida'] -= amount
+        players_dict[player]['life'] -= amount
 
     with open(PATH, 'w') as json_file:
         json.dump(players_dict, json_file)
@@ -52,19 +52,19 @@ def update_life(PATH, player, action, amount):
 
 # Obtener listado de jugadores
 
-players_list = usuarios_vivos(DATA_PATH)
+players_list = alive_players(DATA_PATH)
 
 # Hacer bucle while listado jugadores > 1 se ejecute
 
 while len(players_list) > 1:
 
     for player in players_list:  # Recorre listado jugadores
-        score = tirar_dado()  # Cada jugador lanza el dado y actualiza los puntos de vida
+        score = throw_dice()  # Cada jugador lanza el dado y actualiza los puntos de vida
         if score < 50:
             update_life(DATA_PATH, player, 'minus', 1)
         else:
             update_life(DATA_PATH, player, 'add', 1)
 
-    players_list = usuarios_vivos(DATA_PATH)  # Actualiza listado de jugadores
+    players_list = alive_players(DATA_PATH)  # Actualiza listado de jugadores
 
 print(f'El ganador es {players_list[0]}')
