@@ -15,6 +15,9 @@ for char in text:
         break
     index += 1
 
+print(text[0:index])
+
+
 # Otra solución:
 index = text.rindex('X')
 
@@ -34,12 +37,12 @@ for item in shopping_list:
 numbers = [2, 8, 7, 5, 0, 9, 22, 99]
 double_numbers = list()
 
-for number in numbers: # Para cada número dentro de la lista números
+for number in numbers:  # Para cada número dentro de la lista números
     double = number * 2
     double_numbers.append(double)
-    
+
 print(double_numbers)
-    
+
 
 # for number in range(0, 101, 2): # Si pones (100), va de 0 a 99. El step permite decir de cuanto en cuanto salta el número
 #    print(number)

@@ -47,7 +47,7 @@ print(" ################################################")
 
 credito = input('ESCRIBE el crédito que tienes  $>>: ')
 
-credito_num = float(credito)
+credito_num = int(credito)
 
 while True:
     numero_articulo = input('ESCRIBE el número del artículo  $>>: ')
@@ -101,8 +101,8 @@ while True:
         print(" Elija un número del 1 al 12 ")
 
 
-    credito_num = credito_num - int(precio_articulo_elegido)
-    if credito_num < 0: #and error_num_articulo == False:
+    credito_num = credito_num - precio_articulo_elegido
+    if credito_num < 0 and error_num_articulo == False:
         credito_num = credito_antes_compra
         print(" No le queda crédito suficiente para adquirir ese artículo ")
     
