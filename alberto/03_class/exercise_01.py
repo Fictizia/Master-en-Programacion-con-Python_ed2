@@ -3,7 +3,7 @@ while comprobar:
     n = int(input('Introduce un número'))
     if n > 0:
         comprobar = False
-        i = 2 
+        i = 1 
         while i < n:
             c = 2
             primo = True
