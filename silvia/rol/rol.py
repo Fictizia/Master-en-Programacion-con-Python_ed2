@@ -1,5 +1,4 @@
 import json
-
 from random import randint
 
 DATA_PATH = './silvia/rol/players.json'
