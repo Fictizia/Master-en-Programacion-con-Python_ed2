@@ -102,7 +102,7 @@ while True:
 
 
     credito_num = credito_num - int(precio_articulo_elegido)
-    if credito_num < 0 and error_num_articulo == False:
+    if credito_num < 0: #and error_num_articulo == False:
         credito_num = credito_antes_compra
         print(" No le queda crédito suficiente para adquirir ese artículo ")
     
