@@ -9,6 +9,7 @@
 
 import random
 
+# Se crea la baraja
 suit = list(range(1, 10))
 
 for ten in range(4):
@@ -16,13 +17,17 @@ for ten in range(4):
 
 maze = suit * 4
 
-user = 0
-bank = 0
+# Se inicializan los contadores de puntos del jugador y la banca
+player_points = 0
+bank_points = 0
+
+# Se define una función que reparta una carta y la retire de la baraja
+
 
 def give_a_card(maze):
     """
     parametro: maze
-    
+
     elige un elemento de la lista maze (una carta de la baraja)
     retira ese elemento para que no se vuelva a repartir
 
@@ -30,64 +35,52 @@ def give_a_card(maze):
     """
     card = random.choice(maze)
     maze.remove(card)
-    
+
     return card
 
-user = give_a_card(maze)
-print(f'Tienes {user} puntos')
+# Se hace el primer reparto
 
-bank = give_a_card(maze)
 
-play = True
+player_points = give_a_card(maze)
+print(f'Tienes {player_points} puntos.')
 
-def user_turn(user):
-    if ask_for_card == 'yes':
-        points = give_a_card(maze)
-        user += points
+bank_points = give_a_card(maze)
+
+# Flujo de juego
+
+player_game, bank_game = True, True
+
+while player_game == True or bank_game == True:
+    if player_game == True:
+        question = input('¿Quieres carta? (sí o no): ')
+        if question == 'sí':
+            player_card_value = give_a_card(maze)
+            print(f'Carta jugador {player_card_value}')
+            player_points += player_card_value
+            print(f'Tienes {player_points} puntos.')
+        else:
+            player_game = False
+
+    if player_points >= 21:
+        break
+
+    if bank_points < 15:
+        bank_card_value = give_a_card(maze)
+        print(f'Recibe carta la banca')
+        bank_points += bank_card_value
+#       print(f'Total BANCA {bank_points}')
     else:
-        if user <= 21 and user > bank:
-            print(f'Tienes {user} puntos y la banca {bank} ¡¡Has ganado!!')
-        play = False
-    return user
+        bank_game = False
 
-def bank_turn(bank):
-    if bank <= 15:
-        points = give_a_card(maze)
-        bank += points
-    else:
-        print('La banca se planta')
-        play = False
-    return bank
-
-while play == True:
-    ask_for_card = input('¿Quieres otra carta? (yes/no): ')
-    user_turn()
-
-    bank_turn()
+    if bank_points >= 21:
+        break
 
 
+# Resultado
 
-            
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    
-
-
- 
-
-
-
-
-
-
+if (bank_points > 21) or (player_points <= 21 and player_points > bank_points):
+    print(
+        f'Has ganado. Tienes {player_points} puntos y la banca {bank_points} puntos')
+else:
+    print(
+        f'Gana la banca. Tiene {bank_points} puntos y tú tienes {player_points} puntos')
