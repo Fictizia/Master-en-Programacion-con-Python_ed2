@@ -5,6 +5,9 @@ DATA_PATH = './silvia/rol/players.json'
 
 
 def throw_dice():
+    """
+    Aquí debería haber una descripción de la función
+    """
     score_dice = randint(0, 100)
     return score_dice
 
