@@ -10,79 +10,97 @@
 import random
 
 # Se crea la baraja
-suit = list(range(1, 10))
 
-for ten in range(4):
-    suit.append(10)
+def create_maze():
+    """
+    Crea una baraja a partir de una lista del 1 al 10 y le añade 3 cartas de valor 10, equivalentes a las
+    figuras J, Q, K
 
-maze = suit * 4
+    Multiplica esa lista por 4, una por palo
 
-# Se inicializan los contadores de puntos del jugador y la banca
-player_points = 0
-bank_points = 0
+    Devuelve una lista
+    """
+    suit = list(range(1, 10)) # Cartas en un palo
+
+    for _ in range(4):
+        suit.append(10)
+
+    deck = suit * 4 # La baraja son las figuras de los cuatro palos
+    return deck
+
 
 # Se define una función que reparta una carta y la retire de la baraja
 
-
 def give_a_card(maze):
     """
-    parametro: maze
+    Parámetro: maze
 
-    elige un elemento de la lista maze (una carta de la baraja)
-    retira ese elemento para que no se vuelva a repartir
+    Elige un elemento de la lista maze (una carta de la baraja)
+    Retira ese elemento para que no se vuelva a repartir
 
-    devuelve un entero
+    Devuelve un entero
     """
     card = random.choice(maze)
     maze.remove(card)
 
     return card
 
-# Se hace el primer reparto
+# Juego después del primer reparto
 
+def continue_game(english_deck, player_points, bank_points):
+    """
+    Parámetros: english_deck, player_points, bank_points
 
-player_points = give_a_card(maze)
-print(f'Tienes {player_points} puntos.')
+    Hay un input con el que el jugador indica si quiere recibir otra carta y le dice el número de puntos que tiene
+    Si el jugador tiene más de 21 puntos, pierde
 
-bank_points = give_a_card(maze)
+    La banca recibe carta siempre que tenga menos de 15 puntos. Si se pasa de 21, pierde
 
-# Flujo de juego
-
-player_game, bank_game = True, True
-
-while player_game or bank_game:
-    if player_game:
-        question = input('¿Quieres carta? (sí o no): ')
-        if 'S' in question.upper():
-            player_card_value = give_a_card(maze)
-            print(f'Carta jugador {player_card_value}')
-            player_points += player_card_value
-            print(f'Tienes {player_points} puntos')
-        else:
-            player_game = False
+    Después de cada turno, evalúa el resultado
+    """
+    player_game = True
+    bank_game = True
+    question = input('¿Quieres carta? (sí o no): ')
+    if 'S' in question.upper() and player_game:
+        player_card_value = give_a_card(english_deck)
+        print(f'Carta jugador {player_card_value}')
+        player_points += player_card_value
+        print(f'Tienes {player_points} puntos')
+    else:
+        player_game = False
 
     if player_points >= 21:
         print('Te has pasado de 21')
-        break
+        evaluate_result(player_points, bank_points)
+        return 
 
-    if bank_points < 15:
-        bank_card_value = give_a_card(maze)
+    if bank_points < 15 and bank_game:
+        bank_card_value = give_a_card(english_deck)
         print(f'Recibe carta la banca')
         bank_points += bank_card_value
-#       print(f'Total BANCA {bank_points}')
+        print(f'Total BANCA {bank_points}')
     else:
         bank_game = False
         print('La banca se planta')
 
-    if bank_points >= 21                                                                                                                                                                          :
-        break
+    if bank_points >= 21:
+        evaluate_result(player_points, bank_points)
+        return
 
+    continue_game(english_deck, player_points, bank_points)
 
-# Resultado
+# Función que evalúa el resultado
 
-if (bank_points > 21) or (player_points <= 21 and player_points > bank_points):
-    print(
-        f'Has ganado. Tienes {player_points} puntos y la banca {bank_points} puntos')
-else:
-    print(
-        f'Gana la banca. Tiene {bank_points} puntos y tú tienes {player_points} puntos')
+def evaluate_result(player_points, bank_points):
+    if (bank_points > 21) or (player_points <= 21 and player_points > bank_points):
+        print(
+            f'Has ganado. Tienes {player_points} puntos y la banca {bank_points} puntos')
+    else:
+        print(
+            f'Gana la banca. Tiene {bank_points} puntos y tú tienes {player_points} puntos')
+
+english_deck = create_maze()
+player_points = give_a_card(english_deck) # Contador de puntos del jugador
+bank_points = give_a_card(english_deck) # Contador de puntos de la banca
+print(f'Tienes {player_points} puntos')
+continue_game(english_deck, player_points, bank_points)
