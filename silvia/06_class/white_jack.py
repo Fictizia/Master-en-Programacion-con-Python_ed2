@@ -50,18 +50,19 @@ bank_points = give_a_card(maze)
 
 player_game, bank_game = True, True
 
-while player_game == True or bank_game == True:
-    if player_game == True:
+while player_game or bank_game:
+    if player_game:
         question = input('¿Quieres carta? (sí o no): ')
-        if question == 'sí':
+        if 'S' in question.upper():
             player_card_value = give_a_card(maze)
             print(f'Carta jugador {player_card_value}')
             player_points += player_card_value
-            print(f'Tienes {player_points} puntos.')
+            print(f'Tienes {player_points} puntos')
         else:
             player_game = False
 
     if player_points >= 21:
+        print('Te has pasado de 21')
         break
 
     if bank_points < 15:
@@ -71,8 +72,9 @@ while player_game == True or bank_game == True:
 #       print(f'Total BANCA {bank_points}')
     else:
         bank_game = False
+        print('La banca se planta')
 
-    if bank_points >= 21:
+    if bank_points >= 21                                                                                                                                                                          :
         break
 
 
