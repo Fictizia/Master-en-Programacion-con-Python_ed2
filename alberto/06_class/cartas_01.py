@@ -36,6 +36,11 @@ import random
 
 # usuario = 0
 # banca = 0
+
+puntuacion_banca = 0
+puntuacion_usuario = 0
+
+
 elementos = list(range(1,10))
 for ten in range (4):
     elementos.append(10)
@@ -54,7 +59,8 @@ def primera_mano():
 def quiere_otra_otra():
     respuesta = input('¿Quieres otra? ')
     if respuesta.upper() in 'NO':
-        return False
+        print('Te has plantados')
+        # return False
     return True
 
 def reparte_una_carta(carta_usuario, mano_banca):
@@ -73,4 +79,9 @@ if quiere_otra_otra():
     else:
         puntuacion_usuario > 21
         print(quiere_otra_otra())
+    if puntuacion_banca == 15:
+        print("Me planto")
+    elif puntuacion_banca < 15:
+        reparte_una_carta()
+        reparte_una_carta(carta_banca)
     
