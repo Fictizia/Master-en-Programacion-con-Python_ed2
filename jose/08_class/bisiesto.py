@@ -21,6 +21,9 @@ def main():
             print("Si es bisiesto")
         else:
             print("No es bisiesto")
+    except ValueError:
+        print('INTRODUCE EL VALOR NUMERICO SO MELON')
+    
     except:
         print('Escribe un año entre 1582 y 2020')
         main()
