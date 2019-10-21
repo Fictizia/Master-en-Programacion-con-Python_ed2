@@ -1,3 +1,5 @@
+import random
+
 english_deck = {
     'tréboles':
     {'As': 1,
@@ -60,3 +62,17 @@ english_deck = {
      'K': 10,
      },
 }
+
+
+def give_card():
+    suits = ['tréboles', 'corazones', 'picas', 'diamantes']
+    values = ['As', '2', '3', '4', '5', '6',
+              '7', '8', '9', '10', 'J', 'Q', 'K']
+
+    suit = random.choice(suits)
+    value = random.choice(values)
+
+    card = english_deck[suit][value]
+    del english_deck[suit][value]
+    print(f'Tu carta es el {value} de {suit}. Tienes {card} puntos')
+    return card
