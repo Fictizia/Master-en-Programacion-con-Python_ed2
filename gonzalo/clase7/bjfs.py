@@ -16,7 +16,7 @@ def crear_baraja():
     Cargar un palo con 10 cartas del 1 al 10, y con las cuatro últimas q valen 10 (baraja francesa)
     """
     palo = list(range(1,10))
-    for diez in range(4):
+    for _ in range(4):
         palo.append(10)
     #
     baraja = palo + palo + palo + palo
