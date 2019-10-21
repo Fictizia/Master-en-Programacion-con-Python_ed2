@@ -27,10 +27,8 @@ bank_points = 0
 def give_a_card(maze):
     """
     parametro: maze
-
     elige un elemento de la lista maze (una carta de la baraja)
     retira ese elemento para que no se vuelva a repartir
-
     devuelve un entero
     """
     card = random.choice(maze)
