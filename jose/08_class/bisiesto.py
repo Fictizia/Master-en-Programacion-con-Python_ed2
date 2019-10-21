@@ -7,8 +7,23 @@ def es_bisiesto(anno):
         return True
     return False
 
-anno = escribir_anno()
-if es_bisiesto(anno):
-    print("Si es bisiesto")
-else:
-    print("No es bisiesto")
+def validar_anno(anno):
+    if anno < 1582 or anno > 2020:
+        raise Exception
+            
+
+def main():
+     
+    try:
+        anno = escribir_anno()   
+        # validar_anno(anno)
+        if es_bisiesto(anno):
+            print("Si es bisiesto")
+        else:
+            print("No es bisiesto")
+    except:
+        print('Escribe un año entre 1582 y 2020')
+        main()
+
+
+main()
