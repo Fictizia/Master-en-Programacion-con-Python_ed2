@@ -1,4 +1,4 @@
-from maze import give_card, english_deck
+from silvia.white_jack.maze import give_card, english_deck 
 
 print(english_deck)
 card = give_card()
