@@ -5,8 +5,8 @@ def change_numn(num):
     return num
 
 second_num = change_numn(num)
-print(num) # chachi
-print(second_num)
+print(num) # chachi 1
+print(second_num) # 6
 
 player = {'name': 'jose'}
 
@@ -14,4 +14,4 @@ def change_player(new_player):
     new_player['name'] = 'Alberto'
 
 change_player(player)
-print(player)
+print(player) # {'name': 'Alberto'}
