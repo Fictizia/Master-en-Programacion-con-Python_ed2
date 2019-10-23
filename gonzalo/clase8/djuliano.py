@@ -25,7 +25,7 @@ def escribir_dia():
 
 def validar_dia(bisiesto, dia, mes):
     meses = [31,28,31,30,31,30,31,31,30,31,30,31]
-    if bisiesto == True:
+    if bisiesto:
        meses[1] = 29
 
     dias_mes_introducido = int(meses[mes-1])
@@ -53,7 +53,7 @@ def main():
     # ==== AÑO
     try:
         anno = escribir_anno()
-    except:
+    except ValueError:
         print('Escribe el año en formato numérico')
         main()
     try:
