@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-    "python.pythonPath": "venv/bin/python3"
-=======
-    "python.pythonPath": "venv/bin/python",
+    "python.pythonPath": "venv/bin/python3",
     "python.linting.enabled": true
->>>>>>> 01c9f7ea7124c58396bb489b537355faedadb22b
 }
