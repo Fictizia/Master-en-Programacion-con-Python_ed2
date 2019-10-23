@@ -1,6 +1,21 @@
 import random
 
 score = {'As': 1,
+<<<<<<< HEAD
+         '2': 2,
+         '3': 3,
+         '4': 4,
+         '5': 5,
+         '6': 6,
+         '7': 7,
+         '8': 8,
+         '9': 9,
+         '10': 10,
+         'J': 10,
+         'Q': 10,
+         'K': 10,
+         }
+=======
      '2': 2,
      '3': 3,
      '4': 4,
@@ -14,12 +29,18 @@ score = {'As': 1,
      'Q': 10,
      'K': 10,
      }
+>>>>>>> 06262b9d692617e41ee1d549892b1747459b9007
 
 english_deck = {
     'tréboles': score,
     'corazones': score,
+<<<<<<< HEAD
+    'picas': score,
+    'diamantes': score,
+=======
     'picas':score,
     'diamantes': score
+>>>>>>> 06262b9d692617e41ee1d549892b1747459b9007
 }
 
 
