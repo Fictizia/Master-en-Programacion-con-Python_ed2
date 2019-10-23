@@ -1,0 +1,16 @@
+a_string: bla
+a_number: 1
+a boolean: True
+
+a list:
+- 1
+- 42
+- 3.141
+- 1337
+- help
+- €
+
+another dict:
+  foo: bar
+  key: value
+  the answer: 42
