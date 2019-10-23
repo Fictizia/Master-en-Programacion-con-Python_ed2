@@ -1,7 +1,12 @@
-from maze import give_card, english_deck
+from silvia.white_jack.maze import give_card, english_deck
 
+<<<<<<< HEAD
 # print(english_deck)
 # card = give_card(english_deck)
+=======
+print(english_deck)
+card = give_card(english_deck)
+>>>>>>> 06262b9d692617e41ee1d549892b1747459b9007
 
 # print(card)
 # print('ED', english_deck)
@@ -9,7 +14,11 @@ from maze import give_card, english_deck
 
 def continue_game(english_deck, player_points, bank_points, player_game=True, bank_game=True):
     """
+<<<<<<< HEAD
     Parámetro 1: english_deck. Parámetro 2: player_points. Parámetro 3: bank_points
+=======
+    Parámetros: english_deck, player_points, bank_points
+>>>>>>> 06262b9d692617e41ee1d549892b1747459b9007
     Hay un input con el que el jugador indica si quiere recibir otra carta y le dice el número de puntos que tiene
     Si el jugador tiene más de 21 puntos, pierde
     La banca recibe carta siempre que tenga menos de 15 puntos. Si se pasa de 21, pierde
