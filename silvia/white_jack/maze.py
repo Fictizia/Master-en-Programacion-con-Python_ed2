@@ -19,7 +19,7 @@ english_deck = {
     'tréboles': score,
     'corazones': score,
     'picas':score,
-    'diamantes': score    
+    'diamantes': score
 }
 
 
