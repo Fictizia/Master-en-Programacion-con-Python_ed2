@@ -38,26 +38,30 @@ def productos():
                 if seleccionar_producto == item.get('producto'):
                     print('Perfecto')
                     seleccionar_producto = item
-                    precio = seleccionar_producto.get('precio')                              
-                    print('Has seleccionado  ' + seleccionar_producto.get('producto'))
-                    seleccionar_producto['stock'] -= 1
-                    #dinero = monedero - dinero_maquina
-                    dinero_maquina -= precio
-                    print('Te quedan ---> ' + str(dinero_maquina) + '€')
-                    pregunta = input('¿Quieres comprar algo mas? (S/N): ')
-                    if pregunta == 'N':
-                        continuar_comrpando = False
-                            
-                        if dinero_maquina != 0:
-                            print('Tu cambio ' + str(dinero_maquina) + '€' )
-                            dinero_maquina = 0
-                            print('Gracias por tu compra\n')
-                            break
+                    precio = seleccionar_producto.get('precio')
+                    if dinero_maquina - precio >0:                              
+                        print('Has seleccionado  ' + seleccionar_producto.get('producto'))
+                        seleccionar_producto['stock'] -= 1
+                        #dinero = monedero - dinero_maquina
+                        dinero_maquina -= precio
+                        print('Te quedan ---> ' + str(dinero_maquina) + '€')
+                        pregunta = input('¿Quieres comprar algo mas? (S/N): ')
+                        if pregunta == 'N':
+                            continuar_comrpando = False
+                                
+                            if dinero_maquina != 0:
+                                print('Tu cambio ' + str(dinero_maquina) + '€' )
+                                dinero_maquina = 0
+                                print('Gracias por tu compra\n')
+                                break
+                            else:
+                                print('Gracias por tu compra\n')
+                                break    
                         else:
-                            print('Gracias por tu compra\n')
-                            break    
+                            continue
                     else:
-                        continue
+                        print('No se permite credito negativo')
+                        break
         else:
             print('No tienes dinero')
             dinero_maquina = int(input('Introduce tu dinero \n***************: '))
