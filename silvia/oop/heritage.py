@@ -23,7 +23,7 @@ class Mago(Humano): # hereda de Humano
         print('hocus pocus')
 
     def alardear(self):
-        print('Yo puedo hacer magia y tú no') # machaca el anterior método alardear
+        print('Yo puedo hacer magia y tú no') # machaca el anterior método alardear. Polimorfismo
 
 harry = Mago(1.5, False, 'blanca')
 harry.alardear()
@@ -33,4 +33,12 @@ harry.hacer_magia()
 alberto = Humano(1.8, True, 'blanca')
 # alberto.hacer_magia() # AttributeError: 'Humano' object has no attribute 'hacer_magia'
 
+# polimorfismo simplón
+# IMAGINEMOS QUE ES OTRO ARCHIVO, PARA VERLO TODO JUNTO
+from random import randint
 
+randomize_object = [alberto, harry]
+for _ in range(1, 10):
+    index = randint(0, 1)
+    winner = randomize_object[index]
+    winner.alardear() # polimorfismo. Cada uno alardea de una manera diferente, pero el método se llama igual
