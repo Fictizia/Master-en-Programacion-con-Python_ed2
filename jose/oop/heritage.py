@@ -26,9 +26,17 @@ class Mago(Humano):
         print('Yo puedo hacer magia y tu no')
 
 harry = Mago(1.5, False, 'blanca')
-harry.alardear()
-harry.beber()
-harry.hacer_magia()
-
 alberto = Humano(1.8, True, 'blanca')
+
+#polimorfismo simplon
+# IMAGINEMOS QUE ES OTRO ARCHIVO, PARA VERLO TODO JUNTO
+from random import randint
+
+randomize_object = [alberto, harry]
+for _ in range(1, 10):
+    index = randint(0,1)
+    winner = randomize_object[index]
+    winner.alardear()
+
+
 
