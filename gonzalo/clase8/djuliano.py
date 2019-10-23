@@ -53,7 +53,6 @@ def main():
     # ==== AÑO
     try:
         anno = escribir_anno()
-        tratar_anno = False
     except:
         print('Escribe el año en formato numérico')
         main()
@@ -93,7 +92,6 @@ def main():
     dia_juliano = calcular_dia_juliano(dia, mes, es_bisiesto(anno))
     print(f'El dia juliano es: {dia_juliano}')
 
-    return
 
 # =============================================================================================
 
