@@ -1,9 +1,9 @@
 
 from random import randint
 
-from jose.oop.humano import Humano
-from jose.oop.mago import Mago
-from jose.oop.dementor import Dementor
+from jose.oop.herencia.humano import Humano
+from jose.oop.herencia.mago import Mago
+from jose.oop.herencia.dementor import Dementor
 
 alberto = Humano(1.8, True, 'blanca')
 harry = Mago(1.5, False, 'blanca')

@@ -1,5 +1,5 @@
-from jose.oop.mago import Mago
-from jose.oop.duende import Duende
+from jose.oop.herencia.mago import Mago
+from jose.oop.herencia.duende import Duende
 
 class Demonio(Duende, Mago):
     def rugir(self):

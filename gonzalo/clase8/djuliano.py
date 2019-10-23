@@ -1,10 +1,15 @@
+class YearOutOfRange(Exception):
+    pass
+
+
 def escribir_anno():
     anno = int(input("Escribe el año de cuatro cifras, desde 1582 a 2020: "))
     return anno
 
 def validar_anno(anno):
     if not(anno <= 2020 and anno >= 1582):
-        raise Exception
+        print('AÑO FUERA DE RANGO')
+        raise YearOutOfRange
 
 def es_bisiesto(anno):
     if anno % 4 == 0:
@@ -56,11 +61,11 @@ def main():
     except ValueError:
         print('Escribe el año en formato numérico')
         main()
-    try:
-        validar_anno(anno)
-    except:
-        print('El año ha de estar entre 1582 y 2020')
-        main()
+    # try:
+    validar_anno(anno)
+    # except:
+    #     print('El año ha de estar entre 1582 y 2020')
+    #     main()
 
     # ==== MES
     try:

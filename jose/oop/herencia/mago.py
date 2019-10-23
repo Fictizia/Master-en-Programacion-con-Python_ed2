@@ -1,4 +1,4 @@
-from jose.oop.humano import Humano
+from jose.oop.herencia.humano import Humano
 
 class Mago(Humano):
     def hacer_magia(self):

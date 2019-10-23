@@ -1,4 +1,4 @@
-from jose.oop.mago import Mago
+from jose.oop.herencia.mago import Mago
 
 class Dementor(Mago):
     def dar_repelus(self):
