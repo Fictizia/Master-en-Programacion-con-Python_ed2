@@ -1,0 +1,2 @@
+class MyPersonalError(Exception):
+    pass
