@@ -1,9 +1,13 @@
 import random
+from random import randint
 
-from class_jugador import Jugador
-from class_mascotas import Mascota
+from jugador import Jugador
+from mascotas import Mascota
+from mascotas_jug import mascotas_dict
 
-albert = Mascota(1, 'Albert Rivera', 8, 7, 10)
+valor_aleatorio = randint(1, 10)
+
+albert = Mascota(1, 'Albert Rivera', valor_aleatorio, valor_aleatorio, 10)
 pablo_i = Mascota(2, 'Pablo Iglesias', 7, 9, 10)
 pedro = Mascota(3, 'Pedro Sánchez', 6, 4, 10)
 pablo_c = Mascota(4, 'Pablo Casado', 8, 3, 10)
@@ -33,6 +37,9 @@ print(jugador)
 print(
     f'Aparece {mascota_maquina.nombre} y te va a atacar.\n===============\nElije tu mascota. ')
 
+for _ in opciones_jugador:
+    print(_)
+
 mascota_jugador = jugador.elegir_mascota(
-    opciones_jugador)  # OJO: revisar id mascota
+    mascotas_dict)  # OJO: revisar id mascota
 print(mascota_jugador)

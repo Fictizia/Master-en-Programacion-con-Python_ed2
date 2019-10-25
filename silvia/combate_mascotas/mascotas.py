@@ -9,9 +9,6 @@ class Mascota:
         self.defensa = defensa
         self.vida = vida
 
-    def __repr__(self):
-        return f'{self.identificador} - {self.nombre}. Ataque: {self.ataque}. Defensa: {self.defensa}. Vida: {self.vida}'
-
     def atacar(self):
         ataque = randint(1, 5)
         return ataque
@@ -25,3 +22,6 @@ class Mascota:
             return False
         else:
             return True
+    
+    def __repr__(self):
+        return f'{self.identificador} - {self.nombre}. Ataque: {self.ataque}. Defensa: {self.defensa}. Vida: {self.vida}'
