@@ -2,10 +2,6 @@ from random    import randint
 from mascotas  import mascota1, mascota2, mascota3, mascota4, mascota5
 from maquina   import maquina
 
-#from maquina   import Maquina
-#from mascotas  import Mascotas
-#from maquina   import Maquina
-
 mascotas = [mascota1, mascota2, mascota3, mascota4, mascota5]
 
 def imprimir_mascotas():
