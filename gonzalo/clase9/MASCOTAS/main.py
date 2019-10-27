@@ -10,8 +10,8 @@ def imprimir_mascotas():
     for index, mascota in enumerate(mascotas):
         print(f'{index} .-> {mascota}')
         print("                                                                    ")
-        print(" ================================================================== ")
-        print("                                                                    ")
+    print(" ================================================================== ")
+    print("                                                                    ")
 
 def seleccionar_mascota():
     indice_seleccion = int(input(" Introduce el número de la mascota: "))
