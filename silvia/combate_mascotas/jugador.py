@@ -9,7 +9,9 @@ class Jugador:
     def elegir_mascota_por_teclado(self):
         for mascota in self.mascotas:
             print(self.mascotas[mascota])
+
         id_mascota = input('Indica el número de la mascota que eliges: ')
+
         self.luchador = self.mascotas[id_mascota]
         print(f'Has elegido a {self.luchador}')
 
