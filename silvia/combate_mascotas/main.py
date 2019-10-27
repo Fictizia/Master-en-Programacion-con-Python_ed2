@@ -3,7 +3,6 @@ from random import randint
 
 from jugador import Jugador
 from mascotas import Mascota
-from mascotas_jug import mascotas_dict
 
 
 def accion(atacante, defensor):
@@ -56,7 +55,7 @@ jugador.elegir_mascota_por_teclado()
 
 turno = 0
 
-while (maquina.luchador.vida > 0 and jugador.luchador.vida > 0):
+while (maquina.luchador.esta_vivo() and jugador.luchador.esta_vivo()):
 
     if (turno % 2 == 0):
         accion(maquina.luchador, jugador.luchador)

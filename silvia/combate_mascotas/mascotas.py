@@ -21,9 +21,9 @@ class Mascota:
 
     def esta_vivo(self):
         if self.vida > 0:
-            return False
-        else:
             return True
+        else:
+            return False
 
     def __repr__(self):
         return f'{self.identificador} - {self.nombre}. Ataque: {self.ataque}. Defensa: {self.defensa}. Vida: {self.vida}'
