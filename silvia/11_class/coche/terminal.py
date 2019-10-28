@@ -2,7 +2,7 @@ from view import CarView
 from controller import CarController
 from model import Car
 
-number = int(input('Give me a number from 0 to 1: '))
+number = input('Give me a number from 0 to 1: ')
 
 first_car = Car('Seat', 'Ibiza', 'Rojo')
 second_car = Car('Fiat', '600', 'Blanco')
