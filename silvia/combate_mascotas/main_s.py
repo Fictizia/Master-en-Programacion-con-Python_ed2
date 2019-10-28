@@ -5,9 +5,7 @@ from jugador import Jugador
 from mascotas import Mascota
 
 
-def main():
-
-    def accion(atacante, defensor):
+def accion(atacante, defensor):
         print(f'{atacante.nombre} golpea a {defensor.nombre}')
         valor_ataque = atacante.atacar()
         valor_defensa = defensor.defenderse()
@@ -19,6 +17,8 @@ def main():
 
         defensor.vida -= resultado
 
+
+def main():
     albert = Mascota(1, 'Albert Rivera', 8, 7, 10)
     pablo_i = Mascota(2, 'Pablo Iglesias', 7, 9, 10)
     pedro = Mascota(3, 'Pedro Sánchez', 6, 4, 10)
@@ -53,7 +53,7 @@ def main():
     jugador = Jugador(mascotas_jugador)
 
     try:
-        eleccion = jugador.elegir_mascota_por_teclado()
+        jugador.elegir_mascota_por_teclado()
     except:
         print('Has seleccionado un indice de mascota incorrecto')
 
