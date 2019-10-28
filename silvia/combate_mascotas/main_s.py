@@ -4,20 +4,20 @@ from random import randint
 from jugador import Jugador
 from mascotas import Mascota
 
+def accion(atacante, defensor):
+    print(f'{atacante.nombre} golpea a {defensor.nombre}')
+    valor_ataque = atacante.atacar()
+    valor_defensa = defensor.defenderse()
+
+    resultado = valor_ataque - valor_defensa
+    resultado = max(resultado, 0)
+
+    print(f'{defensor.nombre} pierde {resultado} puntos de vida')
+
+    defensor.vida -= resultado
+
 
 def main():
-
-    def accion(atacante, defensor):
-        print(f'{atacante.nombre} golpea a {defensor.nombre}')
-        valor_ataque = atacante.atacar()
-        valor_defensa = defensor.defenderse()
-
-        resultado = valor_ataque - valor_defensa
-        resultado = max(resultado, 0)
-
-        print(f'{defensor.nombre} pierde {resultado} puntos de vida')
-
-        defensor.vida -= resultado
 
     albert = Mascota(1, 'Albert Rivera', 8, 7, 10)
     pablo_i = Mascota(2, 'Pablo Iglesias', 7, 9, 10)
@@ -53,7 +53,7 @@ def main():
     jugador = Jugador(mascotas_jugador)
 
     try:
-        eleccion = jugador.elegir_mascota_por_teclado()
+        jugador.elegir_mascota_por_teclado()
     except:
         print('Has seleccionado un indice de mascota incorrecto')
 
