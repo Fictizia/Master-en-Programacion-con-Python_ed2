@@ -4,6 +4,7 @@ from random import randint
 from jugador import Jugador
 from mascotas import Mascota
 
+
 def accion(atacante, defensor):
     print(f'{atacante.nombre} golpea a {defensor.nombre}')
     valor_ataque = atacante.atacar()
@@ -18,7 +19,6 @@ def accion(atacante, defensor):
 
 
 def main():
-
     albert = Mascota(1, 'Albert Rivera', 8, 7, 10)
     pablo_i = Mascota(2, 'Pablo Iglesias', 7, 9, 10)
     pedro = Mascota(3, 'Pedro Sánchez', 6, 4, 10)

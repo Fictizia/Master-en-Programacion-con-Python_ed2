@@ -8,16 +8,17 @@ import random
 from frases import frases
 
 
-def texto_random():
-    contador = 0
-    while contador <= 10:
-        with open('frases_2.txt', 'a+') as f:
-            for bloques in range(6):
-                frase = frases[random.randint (0, 33)]
-                print('Frase:', bloques + 1, ':', frase)
-                f.write(str('Frase:' + str(bloques) + frase +'\n' '/*************'))
-            contador +=1
-    pass
 
-texto_random()
+def texto_random(bloques_frases):
+    with open('frases_2.txt', 'a+') as f:
+        for _ in range(bloques_frases):        
+                for bloques in range(6):
+                    frase = frases[random.randint (0, 33)]
+                    print('Frase:', bloques + 1, ':', frase)
+                    f.write(str('Frase:' + str(bloques) + frase +'\n' '/*************'))
+            
+    
+
+bloques_frases = int(input('¿Cuantos bloques de frases quieres (numero entero)? > '))
+texto_random(bloques_frases)
 

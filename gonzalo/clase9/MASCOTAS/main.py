@@ -28,8 +28,8 @@ def imprimir_maquina():
     print("                                                                ")
 
 def ataque_mascota(mascota):
-    mascota.ataque = (mascota.ataque + randint(1, 5)) - (maquina.defensa + randint(1, 5))
-    maquina.vida = maquina.vida - mascota.ataque
+    vida_quitada = (mascota.ataque + randint(1, 5)) - (maquina.defensa + randint(1, 5))
+    maquina.vida = maquina.vida - vida_quitada
     return maquina.vida
 
 def defensa_maquina(mascota):
