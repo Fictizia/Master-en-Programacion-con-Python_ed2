@@ -9,19 +9,21 @@ class Mascota:
         self.defensa = defensa
         self.vida = vida
 
-    def __repr__(self):
-        return f'{self.identificador} - {self.nombre}. Ataque: {self.ataque}. Defensa: {self.defensa}. Vida: {self.vida}'
-
     def atacar(self):
-        ataque = randint(1, 5)
-        return ataque
+        dado_ataque = randint(1, 5)
+        dado_ataque += self.ataque
+        return dado_ataque
 
     def defenderse(self):
-        defensa = randint(1, 5)
-        return defensa
+        dado_defensa = randint(1, 5)
+        dado_defensa += self.defensa
+        return dado_defensa
 
     def esta_vivo(self):
         if self.vida > 0:
-            return False
-        else:
             return True
+        else:
+            return False
+
+    def __repr__(self):
+        return f'{self.identificador} - {self.nombre}. Ataque: {self.ataque}. Defensa: {self.defensa}. Vida: {self.vida}'

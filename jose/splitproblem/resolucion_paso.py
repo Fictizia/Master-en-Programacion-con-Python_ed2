@@ -10,10 +10,14 @@ class NoQuedan(Exception):
 class NoHaySaldo(Exception):
     pass
 
+class SaldoCero(Exception):
+    pass
+
 def seleccionar_item():
     imprimir_posibilidades()
     indice_seleccion = int(input('Introduce el número correspondiente al item deseado> '))
-    return indice_seleccion
+    seleccion = slots_maquina[indice_seleccion]
+    return seleccion
 
 def imprimir_posibilidades():
     for index, item in enumerate(slots_maquina):
@@ -25,6 +29,8 @@ def comprobar_si_existe(item):
     raise NoQuedan
 
 def comprobar_si_hay_saldo(saldo_tarjeta, item):
+    if saldo_tarjeta == 0:
+        raise SaldoCero
     if item.precio > saldo_tarjeta:
         raise NoHaySaldo
     
@@ -37,17 +43,28 @@ def entregar(item):
 
 
 
-saldo_tarjeta = int(input('Introduce el saldo tramposillo .... '))
 
-def comienzo():
+
+def comienzo(saldo_tarjeta):
     item = seleccionar_item()
     try:
         comprobar_si_existe(item)
     except NoQuedan:
         print('No quedan, elige otra cosa')
-        comienzo()
+        comienzo(saldo_tarjeta)
     try:
-        comprobar_si_hay_saldo(tarjeta, item)
+        comprobar_si_hay_saldo(saldo_tarjeta, item)
     except NoHaySaldo:
         print('No tienes saldo para eso')
-        comienzo()
+        comienzo(saldo_tarjeta)
+    except SaldoCero:
+        print('No te queda pasta pringao')
+        return
+    print(f'Has elegido {item}')
+    item.cantidad -= 1
+    saldo_tarjeta -= item.precio
+    comienzo(saldo_tarjeta)
+
+
+saldo_tarjeta = int(input('Introduce el saldo tramposillo .... '))
+comienzo(saldo_tarjeta)

@@ -1,0 +1,31 @@
+Frase:0¿Qué significa “Política de combustible”?
+/*************Frase:1¿Permiten el pago con tarjetas de débito?
+/*************Frase:2No recibo mi email de confirmación ¿Qué puedo hacer?
+/*************Frase:3¿Existe alguna tasa si el coche lo recojo en el aeropuerto?
+/*************Frase:4¿Es necesario que pague mi reserva con una tarjeta de crédito?
+/*************Frase:5¿Qué es lo que me cubre el seguro básico?
+/*************Frase:0¿Qué es eso de la franquicia?
+/*************Frase:1¿Es necesario que pague mi reserva con una tarjeta de crédito?
+/*************Frase:2¿Puedo cruzar la frontera con un coche de alquiler?
+/*************Frase:3¿Permiten el pago con tarjetas de débito?
+/*************Frase:4La persona que conduce, ¿Tiene que ser el titular de la tarjeta de crédito?
+/*************Frase:5¿Puedo contratar un seguro extra para el coche?
+/*************Frase:0¿Es necesario que esté registrado para realizar una reserva?
+/*************Frase:1¿Puedo contratar el servicio de wifi como un extra junto al coche?
+/*************Frase:2¿Puede conducir alguien por mí?
+/*************Frase:3¿Puedo pagar en efectivo cuando vaya a recoger mi coche?
+/*************Frase:4¿Puedo modificar mi reserva?
+/*************Frase:5¿Me pueden pedir más de una tarjeta de crédito para alquilar un coche de categoría superior?
+/*************Frase:0¿Puede conducir alguien por mí?
+/*************Frase:1¿Puedo modificar mi reserva?
+/*************Frase:2¿Puedo pagar la reserva del coche de alquiler con mi tarjeta de débito?
+/*************Frase:3¿Existe alguna tasa si el coche lo recojo en el aeropuerto?
+/*************Frase:4¿Puedo pagar la reserva del coche de alquiler con mi tarjeta de débito?
+/*************Frase:5¿Es obligatorio depositar una fianza?
+/*************Frase:0¿Puedo viajar entre países con un coche de alquiler?.
+/*************Frase:1¿Puedo contratar el servicio de wifi como un extra junto al coche?
+/*************Frase:2¿Tengo algún seguro al alquiler un coche a través de Pepecar?
+/*************Frase:3¿Puedo pagar con una tarjeta de crédito que no sea nominativa?
+/*************Frase:4¿Puede conducir alguien por mí?
+/*************Frase:5¿Es posible elegir el color del coche al realizar la reserva?
+/*************
