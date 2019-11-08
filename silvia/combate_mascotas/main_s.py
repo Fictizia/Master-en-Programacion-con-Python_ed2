@@ -6,16 +6,16 @@ from mascotas import Mascota
 
 
 def accion(atacante, defensor):
-        print(f'{atacante.nombre} golpea a {defensor.nombre}')
-        valor_ataque = atacante.atacar()
-        valor_defensa = defensor.defenderse()
+    print(f'{atacante.nombre} golpea a {defensor.nombre}')
+    valor_ataque = atacante.atacar()
+    valor_defensa = defensor.defenderse()
 
-        resultado = valor_ataque - valor_defensa
-        resultado = max(resultado, 0)
+    resultado = valor_ataque - valor_defensa
+    resultado = max(resultado, 0)
 
-        print(f'{defensor.nombre} pierde {resultado} puntos de vida')
+    print(f'{defensor.nombre} pierde {resultado} puntos de vida')
 
-        defensor.vida -= resultado
+    defensor.vida -= resultado
 
 
 def main():
