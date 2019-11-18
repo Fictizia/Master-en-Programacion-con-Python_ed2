@@ -9,7 +9,7 @@ def main():
     usuario = validar_usuario(opcion)
     if opcion == 3:
         return
-    if usuario == 0:
+    if not usuario:
         return
 
     mostrar_solicitudes_amistad(usuario)

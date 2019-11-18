@@ -49,13 +49,11 @@ def comprobar_existe_usuario(usuario):
     return False
 
 def comprobar_contraseña(usuario, contraseña):
-    datos_usuario = dict()
-
     with open('./USUARIOS/'+usuario.upper()+'/datos_usu.json', 'r') as json_file:
         datos_usuario = json.load(json_file)
 
-    if datos_usuario["contrasena"] == contraseña:
-        return True
+        if datos_usuario["contrasena"] == contraseña:
+            return True
     return False
 
 def registrarse_amistad():
@@ -143,28 +141,28 @@ def mostrar_solicitudes_amistad(usuario):
     print(" ---------------------------- ")
     print(" ** SOLICITUDES de AMISTAD ** ")
 
-    lista_de_ficheros = os.listdir('./USUARIOS/'+usuario.upper())
+    lista_de_ficheros = os.listdir(f'./USUARIOS/{usuario.upper()}')
 
-    cont = 0
+    solicitudes = 0
     for ficheros in lista_de_ficheros:
         if not(ficheros.find("tos_usu") > 0):
-            cont += 1
+            solicitudes += 1
             print("  --->>>>", ficheros[:-5])
 
-    if cont == 0:
+    if solicitudes == 0:
         print(" No tienes solicitudes de amistad actualmente ")
         print("                                              ")
 
 
 def validar_usuario(opcion):
-    if   opcion == 1:
+    if opcion == 1:
         usuario, contraseña = login_amistad()
         if not comprobar_existe_usuario(usuario):
             print(f'** NO existe el usuario {usuario}')
-            return 0
+            return
         if not comprobar_contraseña(usuario, contraseña):
             print(f'** Contraseña incorrecta ')
-            return 0
+            return
 
         return usuario
 
@@ -172,7 +170,7 @@ def validar_usuario(opcion):
         usuario, contraseña = registrarse_amistad()
         if comprobar_existe_usuario(usuario):
             print(f'YA existe el usuario {usuario}')
-            return 0
+            return
 
         if grabar_usuario(usuario, contraseña):
             print("                                                            ")
@@ -182,4 +180,4 @@ def validar_usuario(opcion):
             print("                                                            ")
             print(f'         ** ¡¡Hasta pronto!! {usuario} **                  ')
             print("                                                            ")
-            return 0
+            return
