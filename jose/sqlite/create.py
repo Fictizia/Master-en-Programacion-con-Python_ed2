@@ -7,13 +7,24 @@ def create_connection(db_file):
     conn = None
     try:
         conn = sqlite3.connect(db_file)
-        print(sqlite3.version)
     except Error as e:
         print(e)
-    finally:
-        if conn:
-            conn.close()
+ 
+    return conn
+
+def create_tables(conn):
+    sql_query = """CREATE TABLE nenes (
+                id INTEGER PRIMARY KEY,
+                nombre TEXT NOT NULL,
+                edad INTEGER NOT NULL,
+                esta_registrado INTEGER NOT NULL,
+                karma INTEGER NOT NULL
+            );"""
+
+    cur = conn.cursor()
+    cur.execute(sql_query)
  
  
 if __name__ == '__main__':
-    create_connection("./persistence/pythonsqlite.db")
+    conn = create_connection("./persistence/pythonsqlite.db")
+    create_tables(conn)
