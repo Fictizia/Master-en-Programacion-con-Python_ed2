@@ -23,5 +23,11 @@ def hello_world():
     if request.method == 'GET':
         return my_html
 
+@app.route('/data') # ESPERA QUERY PARAMS /data?user=jose&guapo=true
+def hello():
+    if request.method == 'GET':
+        data = request.args
+        return jsonify(data)
+
 if __name__ == "__main__":
     app.run()
